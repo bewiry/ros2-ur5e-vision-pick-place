@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>motion</name>
+  <version>0.0.0</version>
+  <description>Motion control package for UR5e pick and place with conveyor vision and Robotiq gripper</description>
+
+  <maintainer email="hemaly@todo.todo">hemaly</maintainer>
+  <license>TODO: License declaration</license>
+
+  <!-- Build system -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Core ROS 2 dependencies -->
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+
+  <!-- Message dependencies -->
+  <depend>geometry_msgs</depend>
+  <depend>moveit_msgs</depend>
+
+  <!-- MoveIt dependencies -->
+  <depend>moveit_ros_planning_interface</depend>
+
+  <!-- TF dependencies -->
+  <depend>tf2</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <!-- Gripper dependency -->
+  <depend>robotiq_2f_urcap_adapter</depend>
+
+  <!-- Launch file dependencies -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- Packages launched by full_ir_project.launch.py -->
+  <exec_depend>ur_robot_driver</exec_depend>
+  <exec_depend>ur_moveit_config</exec_depend>
+  <exec_depend>conveyor_cam</exec_depend>
+
+  <!-- Tests -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,63 @@
+Terminal1 : 1st to be ran 
+cd ur_driver
+source ~/ur_driver/install/setup.bash
+source install/setup.bash
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=192.168.1.102 use_fake_hardware:=false
+
+
+
+Terminal2: 2nd to be ran 
+-------------------------------
+cd ur_driver
+source ~/ur_driver/install/setup.bash
+source install/setup.bash
+ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true
+
+
+
+
+-------------------------
+Terminal3: 3rd to be ran 
+
+
+ros2 run robotiq_2f_urcap_adapter robotiq_2f_adapter_node.py --ros-args -p robot_ip:=192.168.1.102
+
+------------------------------------------
+Terminal4: 4th to be ran 
+
+
+
+Run the vision node : 
+
+cd ~/ur_driver
+  source /opt/ros/humble/setup.bash
+  source install/setup.bash
+  ros2 run conveyor_cam tracker --ros-args -p camera_index:=1
+
+
+
+
+---------------------------------
+
+Terminal 5: 5th and last to be ran 
+
+ros2 run motion inverse
+
+
+cd ~/ur_driver
+colcon build --packages-select motion
+source install/setup.bash
+
+
+----------------------------------------
+
+# Launch file run 
+1st
+ros2 launch motion full_ir_project.launch.py
+----------------------------------------------
+2nd
+ros2 launch motion full_ir_project_terminals.launch.py
+-----------------------
+
+
+

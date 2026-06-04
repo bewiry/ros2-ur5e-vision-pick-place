@@ -1,0 +1,26 @@
+image_width: 640
+image_height: 480
+camera_name: webcamera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [625.03791,   0.     , 332.75322,
+           0.     , 625.27446, 253.06032,
+           0.     ,   0.     ,   1.     ]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [-0.299634, -0.018828, -0.000560, -0.001331, 0.000000]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1., 0., 0.,
+         0., 1., 0.,
+         0., 0., 1.]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [562.034  ,   0.     , 334.85248,   0.     ,
+           0.     , 592.8009 , 253.86692,   0.     ,
+           0.     ,   0.     ,   1.     ,   0.     ]

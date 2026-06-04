@@ -1,0 +1,47 @@
+# ROS 2 generated folders
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C++ build files
+*.o
+*.so
+*.a
+CMakeCache.txt
+CMakeFiles/
+
+# Editor files
+.vscode/
+.idea/
+*~
+*.swp
+*.bak
+
+# ROS bags and recordings
+*.db3
+*.mcap
+*.bag
+rosbag2_*/
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.zip
+*.tar
+*.tar.gz
+
+# External repositories / dependencies
+src/Universal_Robots_ROS2_Description/
+src/Universal_Robots_ROS2_Driver/
+src/robotiq_2f_urcap_adapter/
+
+# System files
+.DS_Store
