@@ -4,6 +4,10 @@ This project implements an industrial robotic pick-and-place system using a UR5e
 
 The system detects colored boxes moving on a conveyor, estimates the conveyor speed, predicts when the box reaches a fixed picking line, transforms the conveyor coordinates into the robot base frame, picks the box, and places it on the table based on its color.
 
+## Demo Videos
+
+Can be found in the realeases on the right bar 
+and this is the release link : https://github.com/bewiry/ros2-ur5e-vision-pick-place/releases/tag/v1.0-demo
 ## Features
 
 - UR5e robot motion control using ROS 2 and MoveIt
